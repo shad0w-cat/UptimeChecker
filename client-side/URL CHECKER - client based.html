@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+    <script>
+        // var req = new XMLHttpRequest();
+        // req.open('GET', 'www.google.com', false);
+        // req.send(null);
+        // var headers = req.getAllResponseHeaders().toLowerCase();
+        // console.log(headers)
+
+
+
+
+        // function UrlExists(url, cb) {
+        //     console.log("HELLo")
+        //     $.ajax({
+        //         url: url,
+        //         dataType: 'text',
+        //         type: 'GET',
+        //         complete: function (xhr) {
+        //             if (typeof cb === 'function')
+        //                 cb.apply(this, [xhr.status]);
+        //         }
+        //     });
+        // }
+        // UrlExists('https://www.sggscc.ac.in', function (status) {
+        //     if (status === 200) {
+        //         console.log("was found");
+        //     }
+        //     else if (status === 404) {
+        //         console.log("not was found");
+        //     }
+        // });
+
+
+
+
+        // var checkLink = async url => (await fetch(url)).ok
+        // console.log(checkLink('https://twitter.com'))
+        // var response = new Headers();
+        // response.append("Access-Control-Allow-Origin", "*");
+        var request;
+        if (window.XMLHttpRequest)
+            request = new XMLHttpRequest();
+        else
+            request = new ActiveXObject("Microsoft.XMLHTTP");
+        request.open('GET', 'http://sggscc.ac.in/', false);
+        // request.setRequestHeader("Access-Control-Allow-Origin", "*");
+        //     request.setRequestHeader("Content-Type", "text/plain;charset=UTF-8");
+        // request.setRequestHeader("Access-Control-Allow-Origin", "*");
+        request.send(); // there will be a 'pause' here until the response to come.
+        // the object request will be actually modified
+        if (request.status === 200) {
+            console.log("was found");
+        }
+        else
+            alert("The page you are trying to reach is not available.");
+
+    </script>
+</body>
+
+</html>
