@@ -7,60 +7,13 @@
 </head>
 
 <body>
-
-    <script>
-        // var req = new XMLHttpRequest();
-        // req.open('GET', 'www.google.com', false);
-        // req.send(null);
-        // var headers = req.getAllResponseHeaders().toLowerCase();
-        // console.log(headers)
-
-
-
-
-        // function UrlExists(url, cb) {
-        //     console.log("HELLo")
-        //     $.ajax({
-        //         url: url,
-        //         dataType: 'text',
-        //         type: 'GET',
-        //         complete: function (xhr) {
-        //             if (typeof cb === 'function')
-        //                 cb.apply(this, [xhr.status]);
-        //         }
-        //     });
-        // }
-        // UrlExists('https://www.sggscc.ac.in', function (status) {
-        //     if (status === 200) {
-        //         console.log("was found");
-        //     }
-        //     else if (status === 404) {
-        //         console.log("not was found");
-        //     }
-        // });
-
-
-
-
-        // var checkLink = async url => (await fetch(url)).ok
-        // console.log(checkLink('https://twitter.com'))
-
-
-        var request;
-        if (window.XMLHttpRequest)
-            request = new XMLHttpRequest();
-        else
-            request = new ActiveXObject("Microsoft.XMLHTTP");
-        request.open('GET', 'https://www.dducollegedu.ac.in', false);
-        request.send(); // there will be a 'pause' here until the response to come.
-        // the object request will be actually modified
-        if (request.status === 404) {
-            alert("The page you are trying to reach is not available.");
-        }
-        else
-            console.log("was found");
-
-    </script>
+    <form action="/save-output" method="post">
+        <label for="url">Enter list of urls (seperated with new line): </label>
+        <br>
+        <textarea id="url" name="url" value="https://www.google.com" rows=50 cols="100"></textarea>
+        <br>
+        <input type="submit" value="OK">
+    </form>
 </body>
 
 </html>

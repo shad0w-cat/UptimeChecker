@@ -1,0 +1,27 @@
+{
+  "name": "uptimechecker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shad0w-cat/UptimeChecker.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shad0w-cat/UptimeChecker/issues"
+  },
+  "homepage": "https://github.com/shad0w-cat/UptimeChecker#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "fs": "^0.0.1-security",
+    "node-fetch": "^3.2.6"
+  }
+}
